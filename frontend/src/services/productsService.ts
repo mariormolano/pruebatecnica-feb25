@@ -2,7 +2,7 @@
 //"use client";
 import { Product } from "@/interfaces/products";
 
-const server = process.env.HOST;
+const server = process.env.HOST || "http://localhost:3001";
 
 export const getProducts = async (): Promise<Product[]> => {
   const response = await fetch(server + "/products");
